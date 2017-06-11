@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>IT教育网2015课程学习情况</title>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-size: 12px;
+        }
+
+        .iphone{
+            width: 340px;
+            height: 540px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -270px 0 0 -170px;
+        }
+    </style>
+
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+
+    <!-- 引入柱图的资源 -->
+    <script type="text/javascript" src="../js/H5ComponentBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5ComponentBar.css">
+
+    <body onselectstart="return false;">
+        <!-- 用于开发测试 H5ComponentBar 对象（柱图组件） -->
+        <div class="iphone">
+
+        </div>
+
+        <script type="text/javascript">
+			$(function(){
+        		var cfg={
+        				type:'bar',
+        				text:'logo',
+    					width:500,
+    					height:600,
+                        
+    					css:{
+    						top:'30%',
+    						'textAlign':'center',
+    					},
+    					data:[
+    						['javascript','1','#ff7676'],
+    						['HTML/CSS','.2','#931384'],
+    						['jquery','.3','#672a84'],
+    						['Bootstrap','.35','#fa1384'],
+    						['Canvas','.56','#e42494']
+    					],
+    					center:true
+        		};
+        		//console.log(cfg.data);
+        		var H5Bar=new H5ComponentBar(cfg);
+        		$('.iphone').append(H5Bar);
+        	});
+        </script>
+
+    </body>
+
+</html>

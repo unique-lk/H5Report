@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>慕课网2015课程学习情况</title>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-size: 12px;
+        }
+
+        .H5{
+   
+            background-color: #fff;
+            position: absolute;
+
+        }
+        .page{
+            position: relative;
+
+        }
+        .component{
+            position: absolute;
+            background-size: 100% 100%;
+        }
+    </style>
+
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type='text/javascript' src='../js/lib/jquery.fullPage.js'></script>
+    <script type="text/javascript" src="../js/H5.js"></script>
+    <script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+
+    <body>
+        <!-- 用于开发测试 H5 对象 实现添加页面和添加组件的功能 -->
+
+        <script type="text/javascript">
+            $(function(){
+                var h5=new H5();
+                h5
+                    .addPage('首页','face')
+                        .addComponent('logo',{
+                            text:'logo',
+                            width:400,
+                            height:100,
+                            css:{
+                                backgroundColor:'red',
+                                top:100,
+                                'textAlign':'center',
+                            },
+                            center:true
+
+                        })
+                    .addPage('课程分布页','kcfb')
+                        .addComponent('caption',{
+                            text:'课程分布',
+                            width:400,
+                            height:100,
+                            css:{
+                                backgroundColor:'green',
+                             
+                                top:100,
+                                'textAlign':'center',
+                            },                     
+                            center:true
+                        })
+                    .addPage('数据分析页','sjfx')
+                        .addComponent('caption',{
+                            text:'数据分析',
+                            width:400,
+                            height:100,
+                            css:{
+                                backgroundColor:'yellow',
+                                top:100,
+                                'textAlign':'center',
+                            },
+                            center:true
+                        })
+                    .onload();  
+                //h5.addPage('首页','face');
+
+
+                 $('.H5').fullpage({
+                    'sectionsColor': ['#254875', '#00FF00', '#754587', '#695684'],
+                });
+
+            });
+        </script>
+
+    </body>
+
+</html>

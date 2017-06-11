@@ -1,0 +1,59 @@
+/* H5对象的全局样式 */
+body{
+    margin: 0;
+    padding: 0;
+}
+.page{
+	position: relative;
+	background-image: url('../imgs/page_bg.png');
+	background-size: 100% 100%;
+}
+
+.h5_component_caption{
+	width: 283px;
+	height: 160px;
+	background-image: url('../imgs/page_caption_bg.png');
+	font-size: 20px;
+	line-height: 140px;
+	color:white;
+	text-align: center;
+}
+/*face页面的样式设置*/
+.h5_page_face{
+    background-image: url('../imgs/face_bg.png');
+    background-size: 100% 100%;
+}
+.h5_component_base_slogan{
+   	animation:sway 1s infinite 2s;
+}
+@keyframes sway{
+    0%{
+    	transform: rotate(0deg);
+	}
+	20%{
+	    transform: rotate(3deg);
+	}
+	40%{
+	    transform: rotate(-3deg);
+	}
+	60%{
+	    transform: rotate(2deg);
+	}
+	80%{
+	    transform: rotate(-2deg);
+	}
+	100%{
+	    transform: rotate(0deg);
+	}
+}
+
+/*尾页样式*/
+.h5_component_back{
+	top:20px;
+	animation:back 1s infinite 2s;
+}
+@keyframes back{
+	50%{
+		top:30px;
+	}
+}

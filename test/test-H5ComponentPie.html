@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>IT教育网2015课程学习情况</title>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-size: 12px;
+        }
+
+        .iphone{
+            width: 340px;
+            height: 540px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -270px 0 0 -170px;
+        }
+    </style>
+
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+
+
+    <!-- 引入饼图的资源 -->
+    <script type="text/javascript" src="../js/H5ComponentPie.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5ComponentPie.css">
+
+    <body>
+        <!-- 用于开发测试 H5ComponentPie 对象（饼图组件） -->
+        <div class="iphone">
+
+        </div>
+
+        <script type="text/javascript">
+            $(function(){
+                var cfg={
+                        type:'pie',
+                        text:'logo',
+                        width:400,
+                        height:400,
+                        //bg:'red',
+                        css:{
+                            top:'50%',
+                            marginTop:-80,
+                            'textAlign':'center',
+                        },
+                        data:[
+                            ['JS','.25','#ff7676'],
+                            ['CSS3','.2','#ffad69'],
+                            ['HTML','.1','#99c0ff'],
+                            ['PHP','.15','#5ddbd8'],
+                            ['Jquery','.3','#635135']
+                        ],
+                        animateIn:{
+                            opacity:1,
+                            
+                        },
+                        animateOut:{
+                            opacity:0,
+                           
+                        },
+                        center:true
+                };
+                //console.log(cfg.data);
+                var H5Pie=new H5ComponentPie(cfg);
+                $('.iphone').append(H5Pie);
+            });
+        </script>
+
+    </body>
+
+</html>
